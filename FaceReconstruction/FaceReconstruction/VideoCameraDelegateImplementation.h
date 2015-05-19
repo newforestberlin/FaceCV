@@ -12,6 +12,7 @@
 #import <opencv2/imgproc/types_c.h>
 
 extern NSString *BasicFeatureVisualizerIdentifier;
+extern NSString *FeatureGrouperIdentifier;
 
 @interface VideoCameraDelegateImplementation : NSObject<CvVideoCameraDelegate>
     

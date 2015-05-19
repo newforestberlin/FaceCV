@@ -19,6 +19,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        videoCameraDelegate.switchToProcessorWithIdentifier(FeatureGrouperIdentifier);
+        
         videoCamera = CvVideoCamera(parentView: imageView)
         videoCamera?.defaultAVCaptureDevicePosition = AVCaptureDevicePosition.Front
         videoCamera?.defaultAVCaptureSessionPreset = AVCaptureSessionPreset352x288

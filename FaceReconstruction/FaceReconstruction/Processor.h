@@ -14,7 +14,7 @@
 
 class Processor {
 public:    
-    virtual void processImage(cv::Mat &image) = 0;
+    virtual void processImage(cv::Mat &image) { };
 };
 
 #endif

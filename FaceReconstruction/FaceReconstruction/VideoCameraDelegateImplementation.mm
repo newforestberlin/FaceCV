@@ -16,10 +16,12 @@
 #import <opencv2/opencv.hpp>
 
 #import "BasicFeatureVisualizer.h"
+#import "FeatureGrouper.h"
 
 Processor *currentProcessor = NULL;
 
 NSString *BasicFeatureVisualizerIdentifier = @"BasicFeatureVisualizerIdentifier";
+NSString *FeatureGrouperIdentifier = @"FeatureGrouperIdentifier";
 
 @implementation VideoCameraDelegateImplementation
 
@@ -38,8 +40,13 @@ NSString *BasicFeatureVisualizerIdentifier = @"BasicFeatureVisualizerIdentifier"
 
 - (void)switchToProcessorWithIdentifier:(NSString*)identifier {
     
+    delete currentProcessor;
+    
     if ([identifier isEqualToString:BasicFeatureVisualizerIdentifier]) {
         currentProcessor = new BasicFeatureVisualizer();
+    }
+    else if ([identifier isEqualToString:FeatureGrouperIdentifier]) {
+        currentProcessor = new FeatureGrouper();
     }
     
 }
