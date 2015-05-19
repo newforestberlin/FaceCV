@@ -17,6 +17,11 @@
 
 #include "FeatureGroup.h"
 
+// This one does not compare descriptors of features. But it shows the direction we are going.
+// The SimilarityFeatureGrouper should use descriptor similarity to put features in groups.
+// If a feature is within reach of a group and is similar enough to an feature already in the
+// group, it replaces that feature in the given group. This might compensate for slight differences
+// in descriptor values and could make everything more stable.
 class FeatureGrouper: public Processor {
     
 public:

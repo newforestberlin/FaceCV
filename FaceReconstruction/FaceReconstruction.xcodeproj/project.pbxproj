@@ -163,6 +163,7 @@
 		7DAEBB1B1B0BB9D800A79460 /* Processors */ = {
 			isa = PBXGroup;
 			children = (
+				7DAEBB2D1B0BF29D00A79460 /* SimilarityFeatureGrouper */,
 				7DAEBB241B0BBECE00A79460 /* FeatureGrouper */,
 				7DAEBB1F1B0BBA2200A79460 /* BasicFeatureVisualizer */,
 				7DAEBB201B0BBB6B00A79460 /* Processor.h */,
@@ -207,6 +208,13 @@
 				7DBD673A1B053DC300700793 /* VideoCameraDelegateImplementation.mm */,
 			);
 			name = OpenCV;
+			sourceTree = "<group>";
+		};
+		7DAEBB2D1B0BF29D00A79460 /* SimilarityFeatureGrouper */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = SimilarityFeatureGrouper;
 			sourceTree = "<group>";
 		};
 		89DE0AC16238994F65C7DF31 /* Pods */ = {

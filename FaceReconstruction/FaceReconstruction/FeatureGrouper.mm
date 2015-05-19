@@ -81,11 +81,6 @@ void FeatureGrouper::processImage(cv::Mat &image) {
         }
     }
     
-    NSLog(@"Groups------------------------- %ld", groups.size());
-    
-//    cv::Mat descriptors;
-//    detector->compute(image_copy, keypoints, descriptors);
-//    
     cv::Mat resultImage;
     cv::drawKeypoints(image_copy, keypoints, resultImage);
     
@@ -130,10 +125,6 @@ FeatureGroup *FeatureGrouper::groupForPosition(double x, double y) {
         
         if (delta < FeatureGrouper_GroupRadius) {
             
-//            NSLog(@"centerX=%f, centerY=%f", centerX, centerY);
-//            NSLog(@"x=%f, y=%f", x, y);
-//            NSLog(@"delta=%f", delta);
-
             return &groups[i];
         }
     }
