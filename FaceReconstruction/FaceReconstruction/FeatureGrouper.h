@@ -15,6 +15,8 @@
 #include <opencv2/core/core.hpp>
 #include <opencv2/features2d/features2d.hpp>
 
+#include "FeatureGroup.h"
+
 class FeatureGrouper: public Processor {
     
 public:
@@ -26,8 +28,12 @@ public:
     
 private:
     
+    FeatureGroup *groupForPosition(double x, double y);
+    
     cv::ORB *detector;
     
+    std::vector<FeatureGroup> groups;
+        
 };
 
 #endif /* defined(__FaceReconstruction__FeatureGrouper__) */
