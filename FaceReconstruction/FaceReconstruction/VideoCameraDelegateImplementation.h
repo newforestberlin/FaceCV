@@ -11,8 +11,10 @@
 #import <opencv2/highgui/cap_ios.h>
 #import <opencv2/imgproc/types_c.h>
 
-@interface VideoCameraDelegateImplementation : NSObject<CvVideoCameraDelegate> {
+extern NSString *BasicFeatureVisualizerIdentifier;
+
+@interface VideoCameraDelegateImplementation : NSObject<CvVideoCameraDelegate>
     
-}
+- (void)switchToProcessorWithIdentifier:(NSString*)identifier;
 
 @end

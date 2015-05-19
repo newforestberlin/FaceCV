@@ -14,6 +14,7 @@
 		7D826FE81B02469000A8D1C8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D826FE71B02469000A8D1C8 /* Images.xcassets */; };
 		7D826FEB1B02469000A8D1C8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D826FE91B02469000A8D1C8 /* LaunchScreen.xib */; };
 		7D826FF71B02469000A8D1C8 /* FaceReconstructionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D826FF61B02469000A8D1C8 /* FaceReconstructionTests.swift */; };
+		7DAEBB1E1B0BBA0C00A79460 /* BasicFeatureVisualizer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7DAEBB1C1B0BBA0C00A79460 /* BasicFeatureVisualizer.mm */; };
 		7DBD672A1B053B0600700793 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DBD67291B053B0600700793 /* Accelerate.framework */; };
 		7DBD672C1B053B0D00700793 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DBD672B1B053B0D00700793 /* AssetsLibrary.framework */; };
 		7DBD672E1B053B1400700793 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DBD672D1B053B1400700793 /* AVFoundation.framework */; };
@@ -49,6 +50,9 @@
 		7D826FF51B02469000A8D1C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7D826FF61B02469000A8D1C8 /* FaceReconstructionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceReconstructionTests.swift; sourceTree = "<group>"; };
 		7D8270541B02488B00A8D1C8 /* FaceReconstruction-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FaceReconstruction-Bridging-Header.h"; sourceTree = "<group>"; };
+		7DAEBB1C1B0BBA0C00A79460 /* BasicFeatureVisualizer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BasicFeatureVisualizer.mm; sourceTree = "<group>"; };
+		7DAEBB1D1B0BBA0C00A79460 /* BasicFeatureVisualizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicFeatureVisualizer.h; sourceTree = "<group>"; };
+		7DAEBB201B0BBB6B00A79460 /* Processor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Processor.h; sourceTree = "<group>"; };
 		7DBD67291B053B0600700793 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		7DBD672B1B053B0D00700793 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		7DBD672D1B053B1400700793 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -114,10 +118,11 @@
 		7D826FDD1B02469000A8D1C8 /* FaceReconstruction */ = {
 			isa = PBXGroup;
 			children = (
-				7DBD67391B053DC300700793 /* VideoCameraDelegateImplementation.h */,
-				7DBD673A1B053DC300700793 /* VideoCameraDelegateImplementation.mm */,
+				7DAEBB1B1B0BB9D800A79460 /* Processors */,
 				7D826FE01B02469000A8D1C8 /* AppDelegate.swift */,
 				7D826FE21B02469000A8D1C8 /* ViewController.swift */,
+				7DBD67391B053DC300700793 /* VideoCameraDelegateImplementation.h */,
+				7DBD673A1B053DC300700793 /* VideoCameraDelegateImplementation.mm */,
 				7D826FE41B02469000A8D1C8 /* Main.storyboard */,
 				7D826FE71B02469000A8D1C8 /* Images.xcassets */,
 				7D826FE91B02469000A8D1C8 /* LaunchScreen.xib */,
@@ -150,6 +155,24 @@
 				7D826FF51B02469000A8D1C8 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7DAEBB1B1B0BB9D800A79460 /* Processors */ = {
+			isa = PBXGroup;
+			children = (
+				7DAEBB1F1B0BBA2200A79460 /* BasicFeatureVisualizer */,
+				7DAEBB201B0BBB6B00A79460 /* Processor.h */,
+			);
+			name = Processors;
+			sourceTree = "<group>";
+		};
+		7DAEBB1F1B0BBA2200A79460 /* BasicFeatureVisualizer */ = {
+			isa = PBXGroup;
+			children = (
+				7DAEBB1C1B0BBA0C00A79460 /* BasicFeatureVisualizer.mm */,
+				7DAEBB1D1B0BBA0C00A79460 /* BasicFeatureVisualizer.h */,
+			);
+			name = BasicFeatureVisualizer;
 			sourceTree = "<group>";
 		};
 		89DE0AC16238994F65C7DF31 /* Pods */ = {
@@ -334,6 +357,7 @@
 				7D826FE31B02469000A8D1C8 /* ViewController.swift in Sources */,
 				7D826FE11B02469000A8D1C8 /* AppDelegate.swift in Sources */,
 				7DBD673B1B053DC300700793 /* VideoCameraDelegateImplementation.mm in Sources */,
+				7DAEBB1E1B0BBA0C00A79460 /* BasicFeatureVisualizer.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
