@@ -35,3 +35,20 @@ void BasicFeatureVisualizer::processImage(cv::Mat &image) {
     
     cvtColor(resultImage, image, CV_BGR2BGRA);
 }
+
+/*
+ 
+CODE FOR HAAR CASCADE FACE DETECTOR , USE SOME OF THE TRAINING FILES. THEN GET REGION OF FACE AND THEN DETECT EYES!
+ 
+cv::Mat grayImage;
+std::vector<cv::Rect> faces;
+
+cv::cvtColor(image, grayImage, CV_BGR2GRAY);
+cv::equalizeHist(grayImage, grayImage);
+self.faceDetector.detectMultiScale(grayImage, faces);
+
+for (std::vector<cv::Rect>::iterator it = faces.begin(); it != faces.end();
+     it++)
+cv::rectangle(image, *it, cv::Scalar(0,255,0));
+
+*/
