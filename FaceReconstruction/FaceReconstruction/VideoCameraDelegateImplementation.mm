@@ -17,14 +17,15 @@
 
 #import "BasicFeatureVisualizer.h"
 #import "FeatureGrouper.h"
+#import "HaarCascadeFaceDetector.h"
 
 Processor *currentProcessor = NULL;
 
 NSString *BasicFeatureVisualizerIdentifier = @"BasicFeatureVisualizerIdentifier";
 NSString *FeatureGrouperIdentifier = @"FeatureGrouperIdentifier";
+NSString *HaarCascadeFaceDetectorIdentifier = @"HaarCascadeFaceDetectorIdentifier";
 
 @implementation VideoCameraDelegateImplementation
-
 
 - (id) init {
     self = [super init];
@@ -47,6 +48,9 @@ NSString *FeatureGrouperIdentifier = @"FeatureGrouperIdentifier";
     }
     else if ([identifier isEqualToString:FeatureGrouperIdentifier]) {
         currentProcessor = new FeatureGrouper();
+    }
+    else if ([identifier isEqualToString:HaarCascadeFaceDetectorIdentifier]) {
+        currentProcessor = new HaarCascadeFaceDetector();
     }
     
 }

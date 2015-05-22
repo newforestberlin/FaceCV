@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		34165ADF5E094F115EB716BB /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78223372A3516C37295E9B9D /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		7D6807EB1B0EF631003F4F4E /* HaarCascadeFaceDetector.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7D6807E91B0EF631003F4F4E /* HaarCascadeFaceDetector.mm */; };
+		7D6807F01B0EF7BB003F4F4E /* haarcascade_eye.xml in Resources */ = {isa = PBXBuildFile; fileRef = 7D6807ED1B0EF7BB003F4F4E /* haarcascade_eye.xml */; };
+		7D6807F11B0EF7BB003F4F4E /* haarcascade_frontalface_alt2.xml in Resources */ = {isa = PBXBuildFile; fileRef = 7D6807EE1B0EF7BB003F4F4E /* haarcascade_frontalface_alt2.xml */; };
+		7D6807F21B0EF7BB003F4F4E /* haarcascade_frontalface_default.xml in Resources */ = {isa = PBXBuildFile; fileRef = 7D6807EF1B0EF7BB003F4F4E /* haarcascade_frontalface_default.xml */; };
 		7D826FE11B02469000A8D1C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D826FE01B02469000A8D1C8 /* AppDelegate.swift */; };
 		7D826FE31B02469000A8D1C8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D826FE21B02469000A8D1C8 /* ViewController.swift */; };
 		7D826FE61B02469000A8D1C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D826FE41B02469000A8D1C8 /* Main.storyboard */; };
@@ -41,6 +45,11 @@
 /* Begin PBXFileReference section */
 		247C4C5874ECC6B013E2362D /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		78223372A3516C37295E9B9D /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D6807E91B0EF631003F4F4E /* HaarCascadeFaceDetector.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HaarCascadeFaceDetector.mm; sourceTree = "<group>"; };
+		7D6807EA1B0EF631003F4F4E /* HaarCascadeFaceDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HaarCascadeFaceDetector.h; sourceTree = "<group>"; };
+		7D6807ED1B0EF7BB003F4F4E /* haarcascade_eye.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haarcascade_eye.xml; sourceTree = "<group>"; };
+		7D6807EE1B0EF7BB003F4F4E /* haarcascade_frontalface_alt2.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haarcascade_frontalface_alt2.xml; sourceTree = "<group>"; };
+		7D6807EF1B0EF7BB003F4F4E /* haarcascade_frontalface_default.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haarcascade_frontalface_default.xml; sourceTree = "<group>"; };
 		7D826FDB1B02469000A8D1C8 /* FaceReconstruction.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FaceReconstruction.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D826FDF1B02469000A8D1C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7D826FE01B02469000A8D1C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -101,6 +110,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7D6807EC1B0EF7BB003F4F4E /* OpenCV-HaarCascade-Models */ = {
+			isa = PBXGroup;
+			children = (
+				7D6807ED1B0EF7BB003F4F4E /* haarcascade_eye.xml */,
+				7D6807EE1B0EF7BB003F4F4E /* haarcascade_frontalface_alt2.xml */,
+				7D6807EF1B0EF7BB003F4F4E /* haarcascade_frontalface_default.xml */,
+			);
+			name = "OpenCV-HaarCascade-Models";
+			path = "../../OpenCV-HaarCascade-Models";
+			sourceTree = "<group>";
+		};
 		7D826FD21B02469000A8D1C8 = {
 			isa = PBXGroup;
 			children = (
@@ -136,6 +156,7 @@
 		7D826FDE1B02469000A8D1C8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				7D6807EC1B0EF7BB003F4F4E /* OpenCV-HaarCascade-Models */,
 				7D826FE71B02469000A8D1C8 /* Images.xcassets */,
 				7D826FDF1B02469000A8D1C8 /* Info.plist */,
 				7D8270541B02488B00A8D1C8 /* FaceReconstruction-Bridging-Header.h */,
@@ -221,6 +242,8 @@
 		7DB6CAC11B0E91A400063133 /* HaarCascadeFaceDetector */ = {
 			isa = PBXGroup;
 			children = (
+				7D6807E91B0EF631003F4F4E /* HaarCascadeFaceDetector.mm */,
+				7D6807EA1B0EF631003F4F4E /* HaarCascadeFaceDetector.h */,
 			);
 			name = HaarCascadeFaceDetector;
 			sourceTree = "<group>";
@@ -336,8 +359,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D6807F01B0EF7BB003F4F4E /* haarcascade_eye.xml in Resources */,
 				7D826FE61B02469000A8D1C8 /* Main.storyboard in Resources */,
+				7D6807F11B0EF7BB003F4F4E /* haarcascade_frontalface_alt2.xml in Resources */,
 				7D826FEB1B02469000A8D1C8 /* LaunchScreen.xib in Resources */,
+				7D6807F21B0EF7BB003F4F4E /* haarcascade_frontalface_default.xml in Resources */,
 				7D826FE81B02469000A8D1C8 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -406,6 +432,7 @@
 			files = (
 				7D826FE31B02469000A8D1C8 /* ViewController.swift in Sources */,
 				7D826FE11B02469000A8D1C8 /* AppDelegate.swift in Sources */,
+				7D6807EB1B0EF631003F4F4E /* HaarCascadeFaceDetector.mm in Sources */,
 				7DAEBB2C1B0BCE1400A79460 /* FeatureGroup.mm in Sources */,
 				7DAEBB271B0BBF0700A79460 /* FeatureGrouper.mm in Sources */,
 				7DBD673B1B053DC300700793 /* VideoCameraDelegateImplementation.mm in Sources */,

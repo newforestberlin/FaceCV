@@ -19,7 +19,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        videoCameraDelegate.switchToProcessorWithIdentifier(FeatureGrouperIdentifier);
+        videoCameraDelegate.switchToProcessorWithIdentifier(HaarCascadeFaceDetectorIdentifier);
         
         videoCamera = CvVideoCamera(parentView: imageView)
         videoCamera?.defaultAVCaptureDevicePosition = AVCaptureDevicePosition.Front

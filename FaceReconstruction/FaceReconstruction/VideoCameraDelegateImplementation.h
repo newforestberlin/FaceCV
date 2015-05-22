@@ -13,6 +13,7 @@
 
 extern NSString *BasicFeatureVisualizerIdentifier;
 extern NSString *FeatureGrouperIdentifier;
+extern NSString *HaarCascadeFaceDetectorIdentifier;
 
 @interface VideoCameraDelegateImplementation : NSObject<CvVideoCameraDelegate>
     
